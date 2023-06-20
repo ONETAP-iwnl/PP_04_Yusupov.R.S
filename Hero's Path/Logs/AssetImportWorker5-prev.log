@@ -1,0 +1,85 @@
+Using pre-set license
+Built from '2021.3/release' branch; Version is '2021.3.27f1 (ca3ffb99bcc6) revision 13254651'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ru' Physical Memory: 7561 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.27f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+C:/Users/ромка/Hero's Path
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+64802
+Successfully changed project path to: C:/Users/ромка/Hero's Path
+C:/Users/ромка/Hero's Path
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [13604] Host "[IP] 26.240.38.124 [Port] 0 [Flags] 2 [Guid] 2741351224 [EditorId] 2741351224 [Version] 1048832 [Id] WindowsEditor(7,noyt) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [13604] Host "[IP] 26.240.38.124 [Port] 0 [Flags] 2 [Guid] 2741351224 [EditorId] 2741351224 [Version] 1048832 [Id] WindowsEditor(7,noyt) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Cannot open lmdb database Library/SourceAssetDB because another process has a lock on it. Will retry.
+Cannot open lmdb database Library/SourceAssetDB because another process has a lock on it. Will retry.
+Cannot open lmdb database Library/SourceAssetDB because another process has a lock on it. Will retry.
+Cannot open lmdb database Library/SourceAssetDB because another process has a lock on it. Will retry.
+Cannot open lmdb database Library/SourceAssetDB because another process has a lock on it. Will retry.
+Cannot open lmdb database Library/SourceAssetDB because another process has a lock on it. Will retry.
+mdb_env_open failed on 'Library/SourceAssetDB' with error: 12 'Not enough space'
+received signal from system: SIGSEGV
+Obtained 22 stack frames
+0x00007ff661724ccd (Unity) 
+0x00007ff66172b889 (Unity) 
+0x00007ff6626ad693 (Unity) 
+0x00007ff66172a8c6 (Unity) 
+0x00007ff6617242fc (Unity) 
+0x00007ff663aeda8e (Unity) 
+0x00007ff663bae898 (Unity) 
+0x00007ff663aba3c0 (Unity) 
+0x00007ffaadb523df (ntdll) 
+0x00007ffaadb014a4 (ntdll) 
+0x00007ffaadb50f0e (ntdll) 
+0x00007ff6631f6daf (Unity) 
+0x00007ff662a6cd4f (Unity) 
+0x00007ff662a5e55a (Unity) 
+0x00007ff6629ea731 (Unity) 
+0x00007ff662a2a7d5 (Unity) 
+0x00007ff6629aace5 (Unity) 
+0x00007ff66226a8ef (Unity) 
+0x00007ff6626b7bd8 (Unity) 
+0x00007ff663a97d2e (Unity) 
+0x00007ffaabdc7614 (KERNEL32) BaseThreadInitThunk
+0x00007ffaadb026a1 (ntdll) 
+
