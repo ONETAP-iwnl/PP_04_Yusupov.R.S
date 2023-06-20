@@ -26,21 +26,21 @@ namespace Cainos.PixelArtTopDown_Basic
             float moveVertical = Input.GetAxis("Vertical");
 
 
-            if(Input.GetKey(KeyCode.A))
+            if(Input.GetKeyDown(KeyCode.A))
             {
                 spriteRenderer.flipX = true;
                 animator.SetBool("RunPlayer", true);
             }
-            else if(Input.GetKey(KeyCode.D))
+            else if(Input.GetKeyDown(KeyCode.D))
             {
                 animator.SetBool("RunPlayer", true);
                 spriteRenderer.flipX = false;
             }
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 animator.SetBool("RunPlayer", true);
             }
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S))
             {
                 animator.SetBool("RunPlayer", true);
             }
