@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: f2b6c73d8ef11974c9f01125eab9f579, type: 3}
+    - {fileID: 2800000, guid: b254087c879f9be4b81839879a005d76, type: 3}
+    - {fileID: 2800000, guid: 2c497e8b2ea30d341aba3e4e1a405fc5, type: 3}
+    - {fileID: 2800000, guid: 395acda343e0a9c49a1838425bf226c2, type: 3}
+    - {fileID: 2800000, guid: 3f5ea0feb0e3327439aa0e703bd62a63, type: 3}
+    - {fileID: 2800000, guid: cd7020644f1aff74eb793eb42865412e, type: 3}
+    - {fileID: 2800000, guid: e7ab708dfe5ada845a6f0a151dcb38e0, type: 3}
+    - {fileID: 2800000, guid: 9704c2f1cb58acf4ebdd667d45ef68b0, type: 3}
+    - {fileID: 2800000, guid: 708acb07386d9484ea6401188a70d8d3, type: 3}
+    - {fileID: 2800000, guid: d061d4201a59e7a43a1969cec7c61a6d, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 2031507701, guid: d061d4201a59e7a43a1969cec7c61a6d, type: 3}
+  - {fileID: -314926227, guid: 9704c2f1cb58acf4ebdd667d45ef68b0, type: 3}
+  - {fileID: -1434732483, guid: 395acda343e0a9c49a1838425bf226c2, type: 3}
+  - {fileID: -1129883477, guid: cd7020644f1aff74eb793eb42865412e, type: 3}
+  - {fileID: -1378483795, guid: 708acb07386d9484ea6401188a70d8d3, type: 3}
+  - {fileID: 1009300276, guid: 2c497e8b2ea30d341aba3e4e1a405fc5, type: 3}
+  - {fileID: 678442323, guid: b254087c879f9be4b81839879a005d76, type: 3}
+  - {fileID: -1640138366, guid: f2b6c73d8ef11974c9f01125eab9f579, type: 3}
+  - {fileID: 1356262674, guid: e7ab708dfe5ada845a6f0a151dcb38e0, type: 3}
+  - {fileID: -1255057362, guid: 3f5ea0feb0e3327439aa0e703bd62a63, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Bringer-of-Death_Attack_10_0
+  - Bringer-of-Death_Attack_8_0
+  - Bringer-of-Death_Attack_4_0
+  - Bringer-of-Death_Attack_6_0
+  - Bringer-of-Death_Attack_9_0
+  - Bringer-of-Death_Attack_3_0
+  - Bringer-of-Death_Attack_2_0
+  - Bringer-of-Death_Attack_1_0
+  - Bringer-of-Death_Attack_7_1
+  - Bringer-of-Death_Attack_5_0
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0
