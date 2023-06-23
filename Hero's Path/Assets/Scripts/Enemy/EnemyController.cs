@@ -20,17 +20,16 @@ public class EnemyController : MonoBehaviour
 
     public int maxHealth = 100; // Максимальное количество хитпоинтов игрока
     public int damage; // Урон, который наносит игрок
-
     public int currentHealth; // Текущее количество хитпоинтов игрока
     private int damageTaken; // Количество полученного урона
     private int damageDealt; // Количество нанесенного урона
     private float attackRange;
+    private float delayBeforeDestroy = 2f;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
         attackTimer = attackDelay; // Инициализируем таймер атаки
     }
 
@@ -49,6 +48,7 @@ public class EnemyController : MonoBehaviour
 
                     if (player != null)
                     {
+                        animator.SetTrigger("IsAttack");
                         player.TakeDamage(damage); // Наносим урон врагу
                         damageDealt += damage; // Увеличиваем количество нанесенного урона
                     }
@@ -77,9 +77,6 @@ public class EnemyController : MonoBehaviour
                 {
                     currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
                 }
-                
-            }
-        }
                  if(transform.position.x < 0)
                 {
                     spriteRenderer.flipX = true;
@@ -88,20 +85,29 @@ public class EnemyController : MonoBehaviour
                 {
                     spriteRenderer.flipX = false;
                 }
+                
+            }
+        }
+                
 
-        // Проверяем положение игрока и разворачиваем врага при необходимости
-        if (player.position.x > transform.position.x)
+        if(player != null)
         {
-            spriteRenderer.flipX = true; // Враг разворачивается вправо
+            // Проверяем положение игрока и разворачиваем врага при необходимости
+            if (player.position.x > transform.position.x)
+            {
+                spriteRenderer.flipX = true; // Враг разворачивается вправо
+            }
+            else if (player.position.x < transform.position.x)
+            {
+                spriteRenderer.flipX = false; // Враг разворачивается влево
+            }
         }
-        else if (player.position.x < transform.position.x)
-        {
-            spriteRenderer.flipX = false; // Враг разворачивается влево
-        }
+        
 
         // Устанавливаем параметры анимации
-        animator.SetBool("IsAttack", isAttacking);
+        
         animator.SetBool("IsWalk", waypoints.Count > 0);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -126,7 +132,16 @@ public class EnemyController : MonoBehaviour
 
     private void Die()
     {
-        animator.SetBool("IsDeath", true);
+    animator.SetBool("IsDeath", true);
+    StartCoroutine(DestroyAfterDelay());
+    }
+
+    private IEnumerator DestroyAfterDelay()
+    {
+        // Ждем заданное время
+        yield return new WaitForSeconds(delayBeforeDestroy);
+
+        // Выполняем удаление объекта
         Destroy(gameObject);
     }
 

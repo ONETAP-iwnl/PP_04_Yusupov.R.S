@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    [SerializeField]
+    GameObject DiedCanvas;
     public Animator animator;
-
+    private PauseMenu pause;
     public int maxHealth = 100; // Максимальное количество хитпоинтов игрока
     public int damage; // Урон, который наносит игрок
 
+    public static bool isAttacking; // Флаг атаки
     public int currentHealth; // Текущее количество хитпоинтов игрока
     private int damageTaken; // Количество полученного урона
     private int damageDealt; // Количество нанесенного урона
@@ -26,13 +29,15 @@ public class PlayerCombat : MonoBehaviour
 
     }
 
-    private void Attack()
+    public void Attack()
     {
+        isAttacking = true;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange); // Получаем все коллайдеры в заданном радиусе атаки
 
         foreach (Collider2D collider in colliders)
         {
             EnemyController enemy = collider.GetComponent<EnemyController>(); // Получаем компонент EnemyController на объекте врага
+            
 
             if (enemy != null)
             {
@@ -41,6 +46,8 @@ public class PlayerCombat : MonoBehaviour
             }
         }
         animator.SetTrigger("Attack");
+        Debug.Log(isAttacking);
+        isAttacking = false;
     }
 
     public void TakeDamage(int amount)
@@ -54,9 +61,22 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+
+    public void Heal(int amount)
+    {
+        currentHealth += amount;
+
+        // Ограничиваем здоровье максимальным значением
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
+
     private void Die()
     {
-        
+        DiedCanvas.SetActive(true);
         Destroy(gameObject);
     }
 }

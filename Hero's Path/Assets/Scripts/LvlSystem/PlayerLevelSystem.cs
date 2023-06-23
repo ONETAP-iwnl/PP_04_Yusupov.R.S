@@ -7,7 +7,7 @@ public class PlayerLevelSystem : MonoBehaviour
     [System.Serializable]
     public class EnemyExperienceData
     {
-        public EnemyController enemy; // Ссылка на компонент EnemyController
+        public GameObject enemy; // Ссылка на компонент EnemyController
         public int experienceReward; // Количество опыта, получаемого за убийство данного врага
     }
 
